@@ -37,6 +37,10 @@ app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
 
+app.get('/', (req, res) => {
+    res.status(200).send('Server up and running')
+  })
+  
 app.listen(PORT,() => {
     connectDB();
     console.log(`App is listening on port ${PORT}`);

@@ -11,13 +11,6 @@ dotenv.config({});
 
 const app = express();
 
-// app.get("/home", (req,res) => {
-//     return res.status(200).json({
-//         message: "coming form backend",
-//         success:true
-//     })
-// });
-
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -40,7 +33,7 @@ app.use("/api/v1/application", applicationRoute);
 app.get('/', (req, res) => {
     res.status(200).send('Server up and running')
   })
-  
+
 app.listen(PORT,() => {
     connectDB();
     console.log(`App is listening on port ${PORT}`);

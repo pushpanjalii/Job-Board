@@ -38,4 +38,3 @@ app.listen(PORT,() => {
     connectDB();
     console.log(`App is listening on port ${PORT}`);
 })
-

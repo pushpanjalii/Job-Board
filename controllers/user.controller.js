@@ -28,7 +28,7 @@ export const register = async (req, res) => {
             password: hashedPassword,
             role,
         });
-
+                                   
         return res.status(201).json({
             message: "Account created successfully.",
             success: true
